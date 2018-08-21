@@ -8,17 +8,29 @@ The computer only responds with three answers:
 """
 
 import random
+import sys
 
-def newmethod57():
+def random_game():
     n = random.randint(1, 100)
     while True:
         ans = int(input('Enter your guess: '))
         if ans == n:
             print('Success! You win!')
-            break
+            sys.exit
         elif ans > n:
             print('Too high!')
         else:
             print('Too low')
 
-newmethod57()
+random_game()
+
+def play():
+    play_again = input('Do you want to play again? ((y)es or (n)o ?')
+    if play_again == 'n':
+        print('OK. Hope you had a good time. Thank and bye bye :)')
+        sys.exit
+    else:
+        random_game()
+
+        
+    
