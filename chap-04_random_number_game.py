@@ -8,7 +8,7 @@ The computer only responds with three answers:
 """
 
 import random
-n = random.randint(1, 50)
+n = random.randint(1, 100)
 while True:
     ans = int(input('Enter your guess: '))
     if ans == n:
