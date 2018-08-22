@@ -18,12 +18,14 @@ print('Your job, should you wish to accept it Mr. Phelps, is to guess that numbe
 print('.....don\'t worry though, the computer will give you clues as to the direction you need to be going to figure it out')
 print('Enjoy :)')
 
-
+count = 0
 n = random.randint(1, 100)
 while True:
     ans = int(input('Enter your guess: '))
+    count = count + 1
     if ans == n:
         print('Success! You win!')
+        print(f'That was pretty good. It only took you {count} estimates. Well done!')
         break
     elif ans > n:
         print('Too high!')
