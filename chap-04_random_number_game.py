@@ -8,7 +8,6 @@ The computer only responds with three answers:
 """
 
 import random
-import sys
 
 
 n = random.randint(1, 100)
