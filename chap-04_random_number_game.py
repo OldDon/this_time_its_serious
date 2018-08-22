@@ -47,7 +47,12 @@ def play_again_wrapper():
         displaying the results to the user.
         """
         count = 0
-        n = random.randint(1, 100)
+        print('OK, welcome. Let\'s get started')
+        lsl = int(input('What is the lower number you want to use in your range?' + '\n'))
+        usl = int(input('What is the upper number you want to use in your range?' + '\n'))
+        
+        n = random.randint(lsl, usl)
+
         while True:
             ans = int(input('Enter your guess: '))
             count = count + 1
