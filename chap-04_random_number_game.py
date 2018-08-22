@@ -10,6 +10,13 @@ The computer only responds with three answers:
 
 import random
 
+"""
+The block of code below is simply output to the display to instruct the user...
+
+on what is going to happen and what is needed from the user.
+
+There are no arguments passed here it is all simply text.
+"""
 print('Hi there. This is a little program to pass some time in an "amusing" way (you can be the judge of that!)')
 print('\n')
 print('The aim of the game is this:')
@@ -22,7 +29,24 @@ print('Enjoy :)')
 
 
 def play_again_wrapper():
+    """
+    This function acts as a 'wrapper' around the main game function.
+
+    It allows the main game function (random_game()) to be interogated....
+    
+    for user wishing to continue to play or to quit at any point
+    """
     def random_game():
+        """
+        This function is the backbone of the application.
+
+        It requires NO arguments but provides the user with interaction...
+
+        calculation of their input versus the 'secret' number and ultimately....
+
+        displaying the results to the user.
+t
+        """
         count = 0
         n = random.randint(1, 100)
         while True:
