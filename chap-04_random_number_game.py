@@ -45,7 +45,6 @@ def play_again_wrapper():
         calculation of their input versus the 'secret' number and ultimately....
 
         displaying the results to the user.
-t
         """
         count = 0
         n = random.randint(1, 100)
