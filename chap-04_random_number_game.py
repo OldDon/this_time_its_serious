@@ -18,20 +18,34 @@ print('Your job, should you wish to accept it Mr. Phelps, is to guess that numbe
 print('.....don\'t worry though, the computer will give you clues as to the direction you need to be going to figure it out')
 print('Enjoy :)')
 
-count = 0
-n = random.randint(1, 100)
-while True:
-    ans = int(input('Enter your guess: '))
-    count = count + 1
-    if ans == n:
-        print('Success! You win!')
-        print(f'That was pretty good. It only took you {count} estimates. Well done!')
-        break
-    elif ans > n:
-        print('Too high!')
-    else:
-        print('Too low')
 
+
+
+def play_again_wrapper():
+    def random_game():
+        count = 0
+        n = random.randint(1, 100)
+        while True:
+            ans = int(input('Enter your guess: '))
+            count = count + 1
+            if ans == 0:
+                print('OK. So long. See you soon for another game.')
+                break
+            if ans == n:
+                print('Success! You win!')
+                print(f'That was pretty good. It only took you {count} estimates. Well done!')
+                play_again = input('Do you want to play again? (y)es/(n)o')
+                if play_again == 'y':
+                    random_game()
+                else:
+                    break
+            elif ans > n:
+                print('Too high!')
+            else:
+                print('Too low')
+    random_game()
+
+play_again_wrapper()
 
 
 
